@@ -30,7 +30,7 @@ const OrganizationPage = () => {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 container mx-auto px-4 pt-20 pb-12">
+                <div className="relative z-10 container mx-auto px-4 pt-24 pb-12">
                     <motion.header
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -79,7 +79,7 @@ const OrganizationPage = () => {
                     </motion.header>
 
                     {/* Add margin bottom to prevent section overlap */}
-                    <LeadershipSection className="mb-12" />
+                    <LeadershipSection className="mb-14" />
 
                     {/* Add padding top for more space between sections */}
                     <SekBendSection className="pt-8" />

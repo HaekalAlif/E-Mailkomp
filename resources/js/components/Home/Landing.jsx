@@ -101,13 +101,13 @@ const Landing = () => {
                     >
                         <motion.button
                             whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                            whileTap={{ scale: 0.9 }}
                             className="group px-8 py-4 bg-gradient-to-r from-primary-orange to-primary-blue rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-blue/20"
                             onClick={() => {
                                 window.scrollTo({
                                     top:
                                         window.scrollY +
-                                        window.innerHeight * 0.9,
+                                        window.innerHeight * 0.89,
                                     behavior: "smooth",
                                 });
                             }}

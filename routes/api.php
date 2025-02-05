@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ArticleController; 
+use App\Http\Controllers\Api\EventController;
 use Illuminate\Support\Facades\Route;
 
 // Articles
@@ -17,3 +18,7 @@ Route::prefix('categories')->group(function () {
     Route::get('/', [CategoryController::class, 'index']); // List all categories
     Route::get('/{id}/articles', [CategoryController::class, 'articles']); // Get articles for a category
 });
+
+// Events
+Route::get('/events', [EventController::class, 'index']); // Untuk mendapatkan semua event
+Route::get('/events/{id}', [EventController::class, 'show']); // Untuk mendapatkan event berdasarkan ID

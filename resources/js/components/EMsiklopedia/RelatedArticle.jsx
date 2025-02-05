@@ -10,7 +10,6 @@ const RelatedArticle = () => {
         fetch("/api/articles")
             .then((response) => response.json())
             .then((data) => {
-                // Ensure we're working with an array
                 const articleArray = Array.isArray(data)
                     ? data
                     : data.data || [];
@@ -35,7 +34,7 @@ const RelatedArticle = () => {
     return (
         <aside className="w-full bg-white rounded-lg shadow-md p-6">
             <h2 className="text-xl font-semibold mb-6 text-gray-800">
-                Other Articles
+                Baca Juga
             </h2>
             <div className="space-y-4">
                 {articles.slice(0, 5).map((article) => (

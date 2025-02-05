@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Layouts/Navbar";
 import Landing from "../components/Home/Landing";
 import VisionMission from "../components/Home/VisionMission";
+import Events from "../components/Home/Events";
 import Footer from "../components/Layouts/Footer";
 
 const HomePage = () => {
@@ -16,6 +17,7 @@ const HomePage = () => {
                     <VisionMission />
                 </div>
             </div>
+            <Events />
             <Footer />
         </div>
     );

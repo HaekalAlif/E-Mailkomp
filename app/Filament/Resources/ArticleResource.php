@@ -62,8 +62,11 @@ class ArticleResource extends Resource
                 TextColumn::make('category.name')
                     ->label('Category'),
                 ImageColumn::make('image')
-                    ->label('Gambar')
-                    ->disk('public')
+                ->label('Gambar')
+                ->disk('public')  
+                ->getStateUsing(fn($record) => asset('storage/' . $record->image))  
+                ->width(50)
+                ->height(50),
             ])
             ->filters([
                 //
