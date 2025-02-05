@@ -93,8 +93,17 @@ export default function Events() {
                                 {event.title}
                             </h3>
                             <p className="text-gray-300 text-sm mb-1">
-                                📅 {event.date}
+                                📅{" "}
+                                {new Date(event.date).toLocaleDateString(
+                                    "id-ID",
+                                    {
+                                        day: "numeric",
+                                        month: "long",
+                                        year: "numeric",
+                                    }
+                                )}
                             </p>
+
                             <p className="text-gray-300 text-sm mb-3">
                                 📍 {event.location}
                             </p>

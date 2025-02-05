@@ -104,7 +104,7 @@ const Footer = () => {
 
             {/* Garis Pemisah & Copyright */}
             <div className="border-t border-gray-600 mt-10 pt-6 text-center text-gray-400 text-sm">
-                &copy; 2024 EMAILKOMP. Semua Hak Dilindungi.
+                &copy; 2025 EMAILKOMP
             </div>
         </footer>
     );

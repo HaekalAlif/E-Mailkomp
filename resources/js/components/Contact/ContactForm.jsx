@@ -1,94 +1,71 @@
-import React, { useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 
-const ContactForm = ({
-    onSubmit,
-    isSubmitting,
-    formStatus,
-    formData,
-    handleChange,
-}) => {
+const ContactForm = () => {
     return (
-        <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                Get in Touch
-            </h2>
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="w-full md:w-[60%] space-y-6 p-8 mt-6 rounded-xl backdrop-blur-lg border border-primary-blue/50 shadow-xl transform transition-all duration-500 hover:shadow-2xl hover:shadow-primary-blue/20"
+        >
+            <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="text-2xl md:text-3xl font-medium mb-4"
+            >
+                <span className="bg-gradient-to-r from-white/90 via-primary-orange/70 to-white/90 bg-clip-text text-transparent">
+                    Send Us a Message
+                </span>
+            </motion.h2>
 
-            <form onSubmit={onSubmit}>
-                <div className="mb-6">
-                    <label
-                        htmlFor="name"
-                        className="block text-sm font-medium text-gray-700"
-                    >
-                        Your Name
-                    </label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="mt-2 p-3 w-full bg-gray-100 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-orange"
-                        required
-                    />
-                </div>
-
-                <div className="mb-6">
-                    <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-gray-700"
-                    >
-                        Your Email
-                    </label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="mt-2 p-3 w-full bg-gray-100 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-orange"
-                        required
-                    />
-                </div>
-
-                <div className="mb-6">
-                    <label
-                        htmlFor="message"
-                        className="block text-sm font-medium text-gray-700"
-                    >
-                        Your Message
-                    </label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        className="mt-2 p-3 w-full bg-gray-100 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-orange"
-                        rows="6"
-                        required
-                    ></textarea>
-                </div>
-
-                <div className="flex items-center justify-between">
-                    <button
-                        type="submit"
-                        className={`${
-                            isSubmitting
-                                ? "bg-gray-400 cursor-not-allowed"
-                                : "bg-primary-orange hover:bg-primary-dark"
-                        } text-white font-semibold py-2 px-6 rounded-lg transition duration-300`}
-                        disabled={isSubmitting}
-                    >
-                        {isSubmitting ? "Sending..." : "Send Message"}
-                    </button>
-                </div>
-
-                {formStatus && (
-                    <div className="mt-4 text-center text-sm text-gray-500">
-                        {formStatus}
-                    </div>
-                )}
-            </form>
-        </div>
+            <motion.form
+                action="#"
+                method="POST"
+                className="space-y-6"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+            >
+                <motion.input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    className="w-full px-5 py-3 text-white border border-transparent rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-primary-blue transition-all bg-white/20 backdrop-blur-md"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.6 }}
+                />
+                <motion.input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    className="w-full px-5 py-3 text-white border border-transparent rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-primary-blue transition-all bg-white/20 backdrop-blur-md"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                />
+                <motion.textarea
+                    name="message"
+                    rows="3"
+                    placeholder="Your Message"
+                    className="w-full px-5 py-3 text-white border border-transparent rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-primary-blue transition-all bg-white/20 backdrop-blur-md"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 1 }}
+                ></motion.textarea>
+                <motion.button
+                    type="submit"
+                    className="w-full py-3 bg-gradient-to-r from-primary-orange to-primary-blue text-white rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-primary-blue/20"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 1.2 }}
+                >
+                    Send Message
+                </motion.button>
+            </motion.form>
+        </motion.div>
     );
 };
 
