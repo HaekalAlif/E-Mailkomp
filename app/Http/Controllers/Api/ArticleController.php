@@ -37,8 +37,8 @@ class ArticleController extends Controller
     
     // Clean and format content
     $content = strval($article->content);
-    $content = str_replace('\\n', "\n", $content); // Replace literal \n with actual newlines
-    $content = preg_replace('/\n+/', "\n", $content); // Remove multiple newlines
+    $content = str_replace('\\n', "\n", $content); 
+    $content = preg_replace('/\n+/', "\n", $content); 
     $article->content = $content;
     
     return response()->json($article);

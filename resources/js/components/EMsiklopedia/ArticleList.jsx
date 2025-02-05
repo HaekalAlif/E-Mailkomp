@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import emptyStateLogo from "/public/assets/logo/Logo-E-Mailkomp.png";
 
 const ArticleList = ({ articles = [], loading = false }) => {
     // Loading state with brand color
@@ -13,8 +15,30 @@ const ArticleList = ({ articles = [], loading = false }) => {
 
     if (Array.isArray(articles) && articles.length === 0) {
         return (
-            <div className="text-center text-gray-500 py-8">
-                No articles found
+            <div className="flex flex-col items-center justify-center py-12">
+                {/* Logo dengan animasi bouncing */}
+                <motion.img
+                    src={emptyStateLogo}
+                    alt="No Articles"
+                    className="w-32 h-32 md:w-40 md:h-40"
+                    initial={{ y: -10, opacity: 0 }}
+                    animate={{ y: [0, -5, 0], opacity: 1 }}
+                    transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        repeatType: "reverse",
+                    }}
+                />
+
+                {/* Teks dengan efek masuk halus */}
+                <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.3 }}
+                    className="text-lg md:text-xl text-gray-400 mt-6 bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent font-semibold"
+                >
+                    Artikel tidak ditemukan. Coba lagi nanti!
+                </motion.p>
             </div>
         );
     }

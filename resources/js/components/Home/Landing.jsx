@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "/public/assets/logo/Logo-E-Mailkomp.png";
+import { motion } from "framer-motion";
 
 const Landing = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -45,10 +46,20 @@ const Landing = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-t from-primary-purple via-transparent to-transparent opacity-30"></div>
 
             {/* Content */}
+
             <div className="container mx-auto px-4 relative z-10">
-                <div className="flex flex-col items-center text-center space-y-12">
-                    <div className="relative">
-                        {/* Logo Glows */}
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="flex flex-col items-center text-center space-y-12"
+                >
+                    <motion.div
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.3 }}
+                        className="relative"
+                    >
                         <div className="absolute -inset-16 md:-inset-24 bg-gradient-to-r from-primary-orange via-primary-blue to-primary-orange rounded-full blur-3xl opacity-30 animate-pulse"></div>
                         <div className="absolute -inset-12 md:-inset-20 bg-gradient-to-r from-primary-blue via-primary-orange to-primary-blue rounded-full blur-2xl opacity-25 animate-pulse delay-75"></div>
                         <img
@@ -56,31 +67,57 @@ const Landing = () => {
                             alt="EMAILKOMP Logo"
                             className="relative w-32 h-32 md:w-40 md:h-40 object-contain hover:scale-105 transition-transform duration-300"
                         />
-                    </div>
+                    </motion.div>
 
-                    <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight relative">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                        className="text-5xl md:text-7xl font-bold text-white tracking-tight relative"
+                    >
                         Welcome to{" "}
                         <span className="bg-gradient-to-r from-primary-orange to-primary-blue bg-clip-text text-transparent">
                             EMAILKOMP
                         </span>
                         <div className="absolute -inset-x-8 -inset-y-4 bg-primary-blue/20 blur-3xl -z-10 opacity-50"></div>
-                    </h1>
+                    </motion.h1>
 
-                    <p className="max-w-2xl text-lg text-gray-200/90 leading-relaxed">
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.7 }}
+                        className="max-w-2xl text-lg text-gray-200/90 leading-relaxed"
+                    >
                         Himpunan Mahasiswa D3 Teknik Informatika yang
                         berdedikasi untuk mengembangkan potensi dan kreativitas
                         mahasiswa.
-                    </p>
+                    </motion.p>
 
-                    <div className="flex gap-6">
-                        <button className="group px-8 py-4 bg-gradient-to-r from-primary-orange to-primary-blue rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-blue/20">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.9 }}
+                        className="flex gap-6"
+                    >
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="group px-8 py-4 bg-gradient-to-r from-primary-orange to-primary-blue rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-blue/20"
+                            onClick={() => {
+                                window.scrollTo({
+                                    top:
+                                        window.scrollY +
+                                        window.innerHeight * 0.9,
+                                    behavior: "smooth",
+                                });
+                            }}
+                        >
                             <span className="text-white font-medium">
                                 Learn More
                             </span>
-                        </button>
-                        
-                    </div>
-                </div>
+                        </motion.button>
+                    </motion.div>
+                </motion.div>
             </div>
         </div>
     );

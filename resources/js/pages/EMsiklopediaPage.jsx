@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Layouts/Navbar";
 import ArticleList from "../components/EMsiklopedia/ArticleList";
+import { motion } from "framer-motion";
+import Footer from "../components/Layouts/Footer";
 
 const EMsiklopediaPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -71,11 +73,9 @@ const EMsiklopediaPage = () => {
         <div className="min-h-screen">
             {/* Hero Section */}
             <div className="relative bg-gradient-to-br from-primary-dark via-primary-purple to-primary-dark overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/public/assets/grid.png')] opacity-5"></div>
-
                 <Navbar />
 
-                <div className="relative pt-24 md:pt-32 pb-16 md:pb-20">
+                <div className="relative pt-20 md:pt-24 pb-16 md:pb-20">
                     <div className="absolute inset-0">
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] md:w-[1200px] md:h-[1200px] bg-primary-blue opacity-20 blur-3xl animate-pulse-slow"></div>
                         <div className="absolute -top-1/3 -left-1/4 w-[50vw] h-[45vw] md:w-[700px] md:h-[600px] bg-primary-orange opacity-8 blur-3xl animate-pulse-slow delay-700"></div>
@@ -84,13 +84,31 @@ const EMsiklopediaPage = () => {
 
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="text-center space-y-6 md:space-y-8">
-                            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight">
-                                EMsiklopedia
-                            </h1>
-                            <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto px-4">
-                                Temukan berbagai artikel menarik tentang dunia
-                                teknologi informasi dan perkembangannya.
-                            </p>
+                            <motion.div
+                                initial={{ y: 20, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ duration: 0.7 }}
+                                className="relative"
+                            >
+                                <div className="absolute -inset-x-8 -inset-y-4 bg-primary-blue/20 blur-3xl -z-10 opacity-50 rounded-full"></div>
+                                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">
+                                    <span className="inline-block bg-gradient-to-r from-primary-orange to-primary-blue bg-clip-text text-transparent">
+                                        EMsiklopedia
+                                    </span>
+                                </h1>
+                            </motion.div>
+                            <motion.p
+                                initial={{ y: 20, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ duration: 0.7 }}
+                                className="text-lg text-gray-200/90 font-light"
+                            >
+                                <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto px-4">
+                                    Temukan berbagai artikel menarik tentang
+                                    dunia teknologi informasi dan
+                                    perkembangannya.
+                                </p>
+                            </motion.p>
 
                             <div className="max-w-4xl mx-auto mt-8 space-y-6 px-4">
                                 <div className="relative">
@@ -224,6 +242,7 @@ const EMsiklopediaPage = () => {
                     )}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };
