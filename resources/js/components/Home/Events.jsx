@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import KeenSlider from "keen-slider";
 import "keen-slider/keen-slider.min.css";
 
+
 export default function Events() {
     const sliderRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0);

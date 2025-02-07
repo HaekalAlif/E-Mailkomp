@@ -3,6 +3,7 @@ import Navbar from "../components/Layouts/Navbar";
 import ArticleList from "../components/EMsiklopedia/ArticleList";
 import { motion } from "framer-motion";
 import Footer from "../components/Layouts/Footer";
+import MouseCursorEffect from "../components/Layouts/MouseCursorEffect";
 
 const EMsiklopediaPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -74,6 +75,7 @@ const EMsiklopediaPage = () => {
             {/* Hero Section */}
             <div className="relative bg-gradient-to-br from-primary-dark via-primary-purple to-primary-dark overflow-hidden">
                 <Navbar />
+                <MouseCursorEffect />
 
                 <div className="relative pt-20 md:pt-24 pb-16 md:pb-20">
                     <div className="absolute inset-0">

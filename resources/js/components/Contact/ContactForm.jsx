@@ -13,7 +13,7 @@ const ContactForm = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
-                className="text-2xl md:text-3xl font-medium mb-4"
+                className="text-2xl md:text-3xl font-medium mb-4 text-center"
             >
                 <span className="bg-gradient-to-r from-white/90 via-primary-orange/70 to-white/90 bg-clip-text text-transparent">
                     Send Us a Message

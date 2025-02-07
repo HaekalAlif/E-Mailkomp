@@ -1,15 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import logo from "/public/assets/logo/Logo-E-Mailkomp.png";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation(); // Dapatkan lokasi saat ini
 
+    // Efek untuk scroll ke atas saat berpindah halaman
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll ke atas
+    }, [location.pathname]); // Jalankan efek saat pathname berubah
+
+    // Efek untuk menangani scroll
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
-            // Close mobile menu on scroll
+            // Tutup menu mobile saat scroll
             if (isOpen) setIsOpen(false);
         };
         window.addEventListener("scroll", handleScroll);

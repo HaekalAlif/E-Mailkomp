@@ -2,15 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Layouts/Navbar";
 import LeadershipSection from "../components/Organization/LeadershipSection";
-import SekBendSection from "../components/Organization/SekbendSection";
-import MawaSection from "../components/Organization/MawaSection";
+import FieldSection from "../components/Organization/FieldSection";
 import Footer from "../components/Layouts/Footer";
+import MouseCursorEffect from "../components/Layouts/MouseCursorEffect";
 
 const OrganizationPage = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-primary-dark via-primary-purple to-primary-dark overflow-x-hidden">
             <Navbar />
-
+            <MouseCursorEffect />
             <main className="relative">
                 {/* Background Effects similar to Landing */}
                 <div className="fixed inset-0 pointer-events-none">
@@ -30,7 +30,7 @@ const OrganizationPage = () => {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 container mx-auto px-4 pt-24 pb-12">
+                <div className="relative z-10 container mx-auto px-4 pt-24 pb-14">
                     <motion.header
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -81,11 +81,8 @@ const OrganizationPage = () => {
                     {/* Add margin bottom to prevent section overlap */}
                     <LeadershipSection className="mb-14" />
 
-                    {/* Add padding top for more space between sections */}
-                    <SekBendSection className="pt-8" />
-
-                    {/* Add padding top for more space between sections */}
-                    <MawaSection className="pt-8" />
+                    {/* Add margin bottom to prevent section overlap */}
+                    <FieldSection className="mb-14" />
                 </div>
             </main>
             <Footer />

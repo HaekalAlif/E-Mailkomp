@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../components/Layouts/Footer";
-import MouseCursorEffect from "../components/Contact/MouseCursorEffect";
-import BackgroundEffects from "../components/Contact/BackgroundEffects";
+import MouseCursorEffect from "../components/Layouts/MouseCursorEffect";
+import BackgroundEffects from "../components/Layouts/BackgroundEffects";
 import HeadingSection from "../components/Contact/HeadingSection";
 import ContactForm from "../components/Contact/ContactForm";
 
