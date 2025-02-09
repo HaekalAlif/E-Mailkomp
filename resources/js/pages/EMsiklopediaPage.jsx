@@ -38,7 +38,6 @@ const EMsiklopediaPage = () => {
                 const data = await response.json();
                 setArticles(data.data || []);
 
-                // Set total count only on initial load
                 if (!selectedCategory) {
                     setTotalArticleCount(data.data?.length || 0);
                 }

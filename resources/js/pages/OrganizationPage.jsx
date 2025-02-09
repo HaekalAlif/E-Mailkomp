@@ -34,7 +34,7 @@ const OrganizationPage = () => {
                     <motion.header
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="text-center mb-24 relative"
+                        className="text-center mb-10 md:mb-20 lg:mb-20 relative"
                     >
                         {/* Title glow effect */}
                         <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[120%] h-[200%] bg-primary-blue/5 blur-3xl rounded-full animate-pulse-slow"></div>

@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 const LeadershipSection = () => {
     const leaders = [
         {
-            name: "John Doe",
+            name: "Satria Pambingkas",
             position: "Ketua Umum",
-            imageUrl: "/assets/organization/ketua.png",
+            imageUrl: "/assets/organization/member/ketua.png",
         },
         {
-            name: "Jane Smith",
-            position: "Wakil Ketua",
-            imageUrl: "/assets/organization/wakilKetua.jpg",
+            name: "Aisyah Nurlatifah Ramadhanti",
+            position: "Wakil Ketua Umum",
+            imageUrl: "/assets/organization/member/wakilKetua.jpg",
         },
     ];
 

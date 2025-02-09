@@ -22,13 +22,25 @@ const Index = () => {
                     path="/articles/:slug"
                     element={<EMsiklopediaDetailPage />}
                 />
-                <Route path="/organisasi" element={<OrganizationPage/>}></Route>
-                <Route path="/contact" element={<ContactPage/>}></Route>
+                <Route
+                    path="/organisasi"
+                    element={<OrganizationPage />}
+                ></Route>
+                <Route path="/contact" element={<ContactPage />}></Route>
                 <Route path="/bidang/jaringan" element={<Jaringan />} />
                 <Route path="/bidang/kemahasiswaan" element={<Mawa />} />
-                <Route path="/bidang/sekretaris-bendahara" element={<SekBend />} />
-                <Route path="/bidang/pengembangan-organisasi" element={<PO />} />
-                <Route path="/bidang/penelitian-pengembangan" element={<LitBang />} />
+                <Route
+                    path="/bidang/sekretaris-bendahara"
+                    element={<SekBend />}
+                />
+                <Route
+                    path="/bidang/pengembangan-organisasi"
+                    element={<PO />}
+                />
+                <Route
+                    path="/bidang/penelitian-pengembangan"
+                    element={<LitBang />}
+                />
             </Routes>
         </div>
     );
