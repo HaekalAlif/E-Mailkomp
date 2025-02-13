@@ -3,6 +3,8 @@
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ArticleController; 
 use App\Http\Controllers\Api\EventController;
+use App\Http\Controllers\Api\NewsController;
+use App\Http\Controllers\Api\NewsCategoryController;
 use Illuminate\Support\Facades\Route;
 
 // Articles
@@ -22,3 +24,17 @@ Route::prefix('categories')->group(function () {
 // Events
 Route::get('/events', [EventController::class, 'index']); // Untuk mendapatkan semua event
 Route::get('/events/{id}', [EventController::class, 'show']); // Untuk mendapatkan event berdasarkan ID
+
+// News
+Route::prefix('news')->group(function () {
+    Route::get('/', [NewsController::class, 'index']); // List semua berita dengan filter
+    Route::get('/{slug}', [NewsController::class, 'show']); // Ambil satu berita berdasarkan slug
+    Route::get('/category/{category}', [NewsController::class, 'byCategory']); // Berita berdasarkan kategori
+    Route::get('/search/{query}', [NewsController::class, 'search']); // Pencarian berita
+});
+
+// News Categories
+Route::prefix('news-categories')->group(function () {
+    Route::get('/', [NewsCategoryController::class, 'index']); // List semua kategori berita
+    Route::get('/{id}/news', [NewsCategoryController::class, 'news']); // Ambil berita berdasarkan kategori
+});

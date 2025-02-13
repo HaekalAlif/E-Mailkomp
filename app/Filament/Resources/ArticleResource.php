@@ -17,6 +17,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Forms\Components\RichEditor;
 
 class ArticleResource extends Resource
 {
@@ -33,8 +34,8 @@ class ArticleResource extends Resource
                     ->required(),
                 TextInput::make('slug')
                     ->label('Slug'),
-                TextInput::make('content')
-                    ->label('Konten')
+                RichEditor::make('content')
+                    ->label('konten')
                     ->required(),
                 Select::make('category_id')
                 ->label('Category')

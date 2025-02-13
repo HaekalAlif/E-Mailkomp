@@ -103,7 +103,7 @@ const LitBang = () => {
         mode: "free-snap",
         slides: {
             perView: 5,
-            spacing: 0, // Increased spacing for desktop
+            spacing: 0, 
         },
         breakpoints: {
             "(max-width: 1280px)": {

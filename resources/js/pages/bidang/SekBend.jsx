@@ -5,13 +5,16 @@ import { motion } from "framer-motion";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
-const sekretaris = [
+const ketua = [
     {
         name: "Arum Maylan Palupi",
         position: "Ketua Bidang",
         imageUrl: "/assets/organization/member/ketua.png",
         isLeader: true,
-    },
+    }
+];
+
+const sekretaris = [
     {
         name: "Mungalimah Thoyyibah",
         position: "Ketua Divisi",
@@ -135,18 +138,18 @@ const SekBend = () => {
                             <div className="relative transform skew-x-[-12deg] overflow-hidden rounded-lg bg-gradient-to-br from-primary-dark/90 to-primary-purple/90 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 shadow-lg hover:shadow-primary-orange/20">
                                 <div className="aspect-[9/16] relative overflow-hidden">
                                     <img
-                                        src={sekretaris[0].imageUrl}
-                                        alt={sekretaris[0].name}
+                                        src={ketua[0].imageUrl}
+                                        alt={ketua[0].name}
                                         className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                 </div>
                                 <div className="absolute bottom-0 inset-x-0 p-2 sm:p-3 text-center bg-gradient-to-t from-black/90 to-transparent">
                                     <h3 className="text-xs sm:text-sm font-bold text-white">
-                                        {sekretaris[0].name}
+                                        {ketua[0].name}
                                     </h3>
                                     <span className="mt-1 px-2 sm:px-3 py-1 bg-primary-blue/30 rounded-full text-[10px] sm:text-xs text-white border border-white/10">
-                                        {sekretaris[0].position}
+                                        {ketua[0].position}
                                     </span>
                                 </div>
                             </div>
@@ -205,7 +208,7 @@ const SekBend = () => {
                                                         duration: 0.6,
                                                     }}
                                                 >
-                                                    <div className="group relative w-[80px] sm:w-[130px] md:w-[150px] lg:w-[170px] text-center mx-auto">
+                                                    <div className="group relative w-[10px] sm:w-[130px] md:w-[150px] lg:w-[170px] text-center mx-auto">
                                                         <div className="relative transform skew-x-[-12deg] overflow-hidden rounded-lg bg-gradient-to-br from-primary-dark/90 to-primary-purple/90 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 shadow-lg hover:shadow-primary-orange/20">
                                                             <div className="aspect-[9/16] relative overflow-hidden">
                                                                 <img
@@ -291,7 +294,7 @@ const SekBend = () => {
                                 )}
 
                                 {/* Carousel Indicators (Hanya jika lebih dari 3 item) */}
-                                {section.members.length > 4 &&
+                                {section.members.length > 3 &&
                                     loaded &&
                                     instanceRef.current && (
                                         <div className="flex justify-center gap-2 mt-4">

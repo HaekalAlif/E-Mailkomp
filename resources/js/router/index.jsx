@@ -6,6 +6,8 @@ import EMsiklopediaPage from "../pages/EMsiklopediaPage";
 import EMsiklopediaDetailPage from "../pages/EMsiklopediaDetailPage";
 import OrganizationPage from "../pages/OrganizationPage";
 import ContactPage from "../pages/ContactPage";
+import NewsPage from "../pages/NewsPage";
+import NewsDetailPage from "../pages/NewsDetailPage";
 import Jaringan from "../pages/bidang/Jaringan";
 import Mawa from "../pages/bidang/Mawa";
 import SekBend from "../pages/bidang/SekBend";
@@ -41,6 +43,8 @@ const Index = () => {
                     path="/bidang/penelitian-pengembangan"
                     element={<LitBang />}
                 />
+                <Route path="/berita" element={<NewsPage />} />
+                <Route path="/berita/:slug" element={<NewsDetailPage />} />
             </Routes>
         </div>
     );

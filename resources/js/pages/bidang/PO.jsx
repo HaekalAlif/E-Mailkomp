@@ -5,13 +5,16 @@ import { motion } from "framer-motion";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
-const personalia = [
+const ketua = [
     {
         name: "Muhammad Rajwa Arunarahman",
         position: "Ketua Bidang",
         imageUrl: "/assets/organization/member/ketua.png",
         isLeader: true,
     },
+];
+
+const personalia = [
     {
         name: "Lafiga Rizki Hanata",
         position: "Ketua Divisi",
@@ -89,7 +92,7 @@ const PO = () => {
         },
         breakpoints: {
             "(max-width: 1280px)": {
-                slides: { perView: 4, spacing: 0 },
+                slides: { perView: 5, spacing: 0 },
             },
             "(max-width: 1024px)": {
                 slides: { perView: 3, spacing: 0 },
@@ -153,18 +156,18 @@ const PO = () => {
                             <div className="relative transform skew-x-[-12deg] overflow-hidden rounded-lg bg-gradient-to-br from-primary-dark/90 to-primary-purple/90 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 shadow-lg hover:shadow-primary-orange/20">
                                 <div className="aspect-[9/16] relative overflow-hidden">
                                     <img
-                                        src={personalia[0].imageUrl}
-                                        alt={personalia[0].name}
+                                        src={ketua[0].imageUrl}
+                                        alt={ketua[0].name}
                                         className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                 </div>
                                 <div className="absolute bottom-0 inset-x-0 p-2 sm:p-3 text-center bg-gradient-to-t from-black/90 to-transparent">
                                     <h3 className="text-xs sm:text-sm font-bold text-white">
-                                        {personalia[0].name}
+                                        {ketua[0].name}
                                     </h3>
                                     <span className="mt-1 px-2 sm:px-3 py-1 bg-primary-blue/30 rounded-full text-[10px] sm:text-xs text-white border border-white/10">
-                                        {personalia[0].position}
+                                        {ketua[0].position}
                                     </span>
                                 </div>
                             </div>
@@ -198,89 +201,149 @@ const PO = () => {
 
                             {/* Slider Container */}
                             <div className="px-4 md:px-8">
-                                <div
-                                    ref={sliderRef}
-                                    className="keen-slider max-w-7xl mx-auto"
-                                >
-                                    {section.members
-                                        .slice(1)
-                                        .map((member, index) => (
-                                            <motion.div
-                                                key={`${sectionIndex}-${member.name}-${index}`}
-                                                className="keen-slider__slide"
-                                                initial={{
-                                                    opacity: 0,
-                                                    scale: 0.9,
-                                                }}
-                                                animate={{
-                                                    opacity: 1,
-                                                    scale: 1,
-                                                }}
-                                                transition={{
-                                                    delay: index * 0.1,
-                                                    duration: 0.6,
-                                                }}
-                                            >
-                                                <div className="group relative w-[80px] sm:w-[130px] md:w-[150px] lg:w-[170px] text-center mx-auto">
-                                                    <div className="relative transform skew-x-[-12deg] overflow-hidden rounded-lg bg-gradient-to-br from-primary-dark/90 to-primary-purple/90 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 shadow-lg hover:shadow-primary-orange/20">
-                                                        <div className="aspect-[9/16] relative overflow-hidden">
-                                                            <img
-                                                                src={
-                                                                    member.imageUrl
-                                                                }
-                                                                alt={
-                                                                    member.name
-                                                                }
-                                                                className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
-                                                            />
-                                                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                                                        </div>
-                                                        <div className="absolute bottom-0 inset-x-0 p-2 sm:p-3 text-center bg-gradient-to-t from-black/90 to-transparent">
-                                                            <h3 className="text-[10px] sm:text-xs md:text-sm font-bold text-white">
-                                                                {member.name}
-                                                            </h3>
-                                                            <span className="mt-1 px-1 sm:px-2 py-0.5 bg-primary-orange/30 rounded-full text-[8px] sm:text-[10px] md:text-xs text-white border border-white/10">
-                                                                {
-                                                                    member.position
-                                                                }
-                                                            </span>
+                                {section.members.length > 5 ? (
+                                    // Gunakan slider jika jumlah anggota lebih dari 3
+                                    <div
+                                        ref={sliderRef}
+                                        className="keen-slider max-w-7xl mx-auto"
+                                    >
+                                        {section.members
+                                            .slice(1)
+                                            .map((member, index) => (
+                                                <motion.div
+                                                    key={`${sectionIndex}-${member.name}-${index}`}
+                                                    className="keen-slider__slide"
+                                                    initial={{
+                                                        opacity: 0,
+                                                        scale: 0.9,
+                                                    }}
+                                                    animate={{
+                                                        opacity: 1,
+                                                        scale: 1,
+                                                    }}
+                                                    transition={{
+                                                        delay: index * 0.1,
+                                                        duration: 0.6,
+                                                    }}
+                                                >
+                                                    <div className="group relative w-[10px] sm:w-[130px] md:w-[150px] lg:w-[170px] text-center mx-auto">
+                                                        <div className="relative transform skew-x-[-12deg] overflow-hidden rounded-lg bg-gradient-to-br from-primary-dark/90 to-primary-purple/90 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 shadow-lg hover:shadow-primary-orange/20">
+                                                            <div className="aspect-[9/16] relative overflow-hidden">
+                                                                <img
+                                                                    src={
+                                                                        member.imageUrl
+                                                                    }
+                                                                    alt={
+                                                                        member.name
+                                                                    }
+                                                                    className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                                                />
+                                                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                                                            </div>
+                                                            <div className="absolute bottom-0 inset-x-0 p-2 sm:p-3 text-center bg-gradient-to-t from-black/90 to-transparent">
+                                                                <h3 className="text-[10px] sm:text-xs md:text-sm font-bold text-white">
+                                                                    {
+                                                                        member.name
+                                                                    }
+                                                                </h3>
+                                                                <span className="mt-1 px-1 sm:px-2 py-0.5 bg-primary-orange/30 rounded-full text-[8px] sm:text-[10px] md:text-xs text-white border border-white/10">
+                                                                    {
+                                                                        member.position
+                                                                    }
+                                                                </span>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </motion.div>
-                                        ))}
-                                </div>
-
-                                {/* Carousel Indicators */}
-                                {loaded && instanceRef.current && (
-                                    <div className="flex justify-center gap-2 mt-4">
-                                        {[
-                                            ...Array(
-                                                Math.ceil(
-                                                    (section.members.length -
-                                                        1) /
-                                                        3
-                                                )
-                                            ),
-                                        ].map((_, idx) => (
-                                            <button
-                                                key={idx}
-                                                onClick={() => {
-                                                    instanceRef.current?.moveToIdx(
-                                                        idx * 3
-                                                    );
-                                                }}
-                                                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                                                    Math.floor(
-                                                        currentSlide / 3
-                                                    ) === idx
-                                                        ? "bg-primary-orange/90 w-4"
-                                                        : "bg-white/30 hover:bg-white/50"
-                                                }`}
-                                            />
-                                        ))}
+                                                </motion.div>
+                                            ))}
+                                    </div>
+                                ) : (
+                                    // Jika jumlah anggota <= 3, tampilkan dalam flex tanpa slider
+                                    <div className="flex justify-center gap-4 max-w-7xl mx-auto">
+                                        {section.members.map(
+                                            (member, index) => (
+                                                <motion.div
+                                                    key={`${sectionIndex}-${member.name}-${index}`}
+                                                    initial={{
+                                                        opacity: 0,
+                                                        scale: 0.9,
+                                                    }}
+                                                    animate={{
+                                                        opacity: 1,
+                                                        scale: 1,
+                                                    }}
+                                                    transition={{
+                                                        delay: index * 0.1,
+                                                        duration: 0.6,
+                                                    }}
+                                                >
+                                                    <div className="group relative w-[80px] sm:w-[130px] md:w-[150px] lg:w-[170px] text-center mx-auto">
+                                                        <div className="relative transform skew-x-[-12deg] overflow-hidden rounded-lg bg-gradient-to-br from-primary-dark/90 to-primary-purple/90 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 shadow-lg hover:shadow-primary-orange/20">
+                                                            <div className="aspect-[9/16] relative overflow-hidden">
+                                                                <img
+                                                                    src={
+                                                                        member.imageUrl
+                                                                    }
+                                                                    alt={
+                                                                        member.name
+                                                                    }
+                                                                    className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                                                />
+                                                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                                                            </div>
+                                                            <div className="absolute bottom-0 inset-x-0 p-2 sm:p-3 text-center bg-gradient-to-t from-black/90 to-transparent">
+                                                                <h3 className="text-[10px] sm:text-xs md:text-sm font-bold text-white">
+                                                                    {
+                                                                        member.name
+                                                                    }
+                                                                </h3>
+                                                                <span className="mt-1 px-1 sm:px-2 py-0.5 bg-primary-orange/30 rounded-full text-[8px] sm:text-[10px] md:text-xs text-white border border-white/10">
+                                                                    {
+                                                                        member.position
+                                                                    }
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </motion.div>
+                                            )
+                                        )}
                                     </div>
                                 )}
+
+                                {/* Carousel Indicators (Hanya jika lebih dari 3 item) */}
+                                {section.members.length > 3 &&
+                                    loaded &&
+                                    instanceRef.current && (
+                                        <div className="flex justify-center gap-2 mt-4">
+                                            {[
+                                                ...Array(
+                                                    Math.ceil(
+                                                        (section.members
+                                                            .length -
+                                                            1) /
+                                                            3
+                                                    )
+                                                ),
+                                            ].map((_, idx) => (
+                                                <button
+                                                    key={idx}
+                                                    onClick={() => {
+                                                        instanceRef.current?.moveToIdx(
+                                                            idx * 3
+                                                        );
+                                                    }}
+                                                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                                        Math.floor(
+                                                            currentSlide / 3
+                                                        ) === idx
+                                                            ? "bg-primary-orange/90 w-4"
+                                                            : "bg-white/30 hover:bg-white/50"
+                                                    }`}
+                                                />
+                                            ))}
+                                        </div>
+                                    )}
                             </div>
                         </div>
                     ))}
