@@ -105,7 +105,7 @@ const NewsPage = () => {
                                 <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto px-4">
                                     Temukan informasi terbaru tentang beasiswa,
                                     kegiatan himpunan, dan perkembangan dunia
-                                    akademik serta teknologi..
+                                    akademik serta teknologi
                                 </p>
                             </motion.p>
 

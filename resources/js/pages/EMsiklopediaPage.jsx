@@ -107,7 +107,7 @@ const EMsiklopediaPage = () => {
                                 <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto px-4">
                                     Temukan berbagai artikel menarik tentang
                                     dunia teknologi informasi dan
-                                    perkembangannya.
+                                    perkembangannya
                                 </p>
                             </motion.p>
 

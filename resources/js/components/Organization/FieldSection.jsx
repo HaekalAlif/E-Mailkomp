@@ -12,7 +12,7 @@ const initialFields = [
     {
         id: 2,
         name: "Pengembangan Organisasi",
-        logo: "/assets/organization/bidang/LogoMawa.png",
+        logo: "/assets/organization/bidang/LogoPO.png",
         link: "/bidang/pengembangan-organisasi",
     },
     {
@@ -58,7 +58,7 @@ const FieldSection = () => {
     const handlePointerUp = (link) => {
         const pressDuration = Date.now() - pressStart;
         if (pressDuration < 100) {
-            navigate(link); // Navigasi jika tekan kurang dari 300ms (klik biasa)
+            navigate(link);
         }
     };
 
