@@ -67,10 +67,18 @@ const Footer = () => {
                     </h3>
                     <div className="flex justify-center lg:justify-start space-x-6 mt-4">
                         {[
-                            { icon: FaTiktok, link: "#" },
-                            { icon: FaInstagram, link: "#" },
-                            { icon: FaLinkedinIn, link: "#" },
-                            { icon: FaYoutube, link: "#" },
+                            {
+                                icon: FaTiktok,
+                                link: "https://www.tiktok.com/@emailkompuns",
+                            },
+                            {
+                                icon: FaInstagram,
+                                link: "https://www.instagram.com/emailkompuns",
+                            },
+                            {
+                                icon: FaLinkedinIn,
+                                link: "https://www.linkedin.com/company/emailkompsvuns/",
+                            },
                         ].map((social, index) => (
                             <a
                                 key={index}
@@ -94,10 +102,10 @@ const Footer = () => {
                         Kontak
                     </h3>
                     <p className="text-gray-300 text-sm mb-4">
-                        Email: support@emailkomp.com
+                        Email: emailkomp@d3ti.vokasi.uns.ac.id
                     </p>
                     <p className="text-gray-300 text-sm">
-                        Telepon: +62 123 456 789
+                        Telepon: +62 857-6413-4767
                     </p>
                 </motion.div>
             </div>

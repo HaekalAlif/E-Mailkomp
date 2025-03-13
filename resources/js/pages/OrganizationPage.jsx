@@ -50,7 +50,7 @@ const OrganizationPage = () => {
                                 <span className="inline-block bg-gradient-to-r from-white via-primary-orange/80 to-white bg-clip-text text-transparent animate-gradient-x">
                                     Struktur
                                 </span>{" "}
-                                <span className="inline-block bg-gradient-to-r from-primary-blue via-white to-primary-blue bg-clip-text text-transparent animate-gradient-x animation-delay-500">
+                                <span className="inline-block bg-gradient-to-r from-primary-blue via-white to-primary-blue bg-clip-text text-transparent animate-gradient-x animation-delay-500 p-1">
                                     Organisasi
                                 </span>
                             </h1>
@@ -73,7 +73,7 @@ const OrganizationPage = () => {
                                 transition={{ delay: 0.5 }}
                                 className="text-lg text-gray-200/90 font-light"
                             >
-                                Periode 2025/2026
+                                Periode Tahun 2025
                             </motion.p>
                         </motion.div>
                     </motion.header>

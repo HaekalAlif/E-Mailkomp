@@ -17,6 +17,12 @@ class NewsCategoryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
+    protected static ?string $navigationGroup = 'Content Management';
+    protected static ?int $navigationSort = 3;
+    protected static ?string $modelLabel = 'News Category';
+    protected static ?string $pluralModelLabel = 'News Categories';
+    protected static ?string $navigationLabel = 'News Categories';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -30,7 +36,7 @@ class NewsCategoryResource extends Resource
                     ->label('Slug')
                     ->required()
                     ->maxLength(255)
-                    ->unique(ignoreRecord: true), // Pastikan unik kecuali saat edit
+                    ->unique(ignoreRecord: true), 
             ]);
     }
 

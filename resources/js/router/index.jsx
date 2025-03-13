@@ -13,6 +13,7 @@ import Mawa from "../pages/bidang/Mawa";
 import SekBend from "../pages/bidang/SekBend";
 import PO from "../pages/bidang/PO";
 import LitBang from "../pages/bidang/LitBang";
+import NotFound from "../pages/NotFound";
 
 const Index = () => {
     return (
@@ -45,6 +46,7 @@ const Index = () => {
                 />
                 <Route path="/berita" element={<NewsPage />} />
                 <Route path="/berita/:slug" element={<NewsDetailPage />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </div>
     );

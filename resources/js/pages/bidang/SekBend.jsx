@@ -9,7 +9,7 @@ import "keen-slider/keen-slider.min.css";
 const ketua = [
     {
         name: "Arum Maylan Palupi",
-        position: "Ketua Bidang",
+        position: "Kepala Bidang",
         // imageUrl: "/assets/organization/member/ketua.png",
         isLeader: true,
     },
@@ -18,7 +18,7 @@ const ketua = [
 const sekretaris = [
     {
         name: "Mungalimah Thoyyibah",
-        position: "Ketua Divisi",
+        position: "Kepala Divisi",
         // imageUrl: "/assets/organization/member/ketua.png",
         isLeader: true,
     },
@@ -45,7 +45,7 @@ const sekretaris = [
 const bendahara = [
     {
         name: "Regita Aulia Fridawati",
-        position: "Ketua Divisi",
+        position: "Kepala Divisi",
         // imageUrl: "/assets/organization/member/ketua.png",
         isLeader: true,
     },
@@ -143,7 +143,7 @@ const SekBend = () => {
                                     <img
                                         src={ketua[0].imageUrl}
                                         alt={ketua[0].name}
-                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-140 group-hover:scale-160 transition-transform duration-500"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                 </div>
@@ -249,7 +249,7 @@ const SekBend = () => {
                                                                         alt={
                                                                             member.name
                                                                         }
-                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-140 group-hover:scale-160 transition-transform duration-500"
                                                                     />
                                                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                                                 </div>
@@ -295,7 +295,7 @@ const SekBend = () => {
                                                                         alt={
                                                                             member.name
                                                                         }
-                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-140 group-hover:scale-160 transition-transform duration-500"
                                                                     />
                                                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                                                 </div>

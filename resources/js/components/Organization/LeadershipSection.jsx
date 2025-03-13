@@ -6,12 +6,12 @@ const LeadershipSection = () => {
         {
             name: "Satria Pambingkas",
             position: "Ketua Umum",
-            imageUrl: "/assets/organization/member/",
+            imageUrl: "/assets/organization/anggota/ketua-wakil/satria.jpg",
         },
         {
             name: "Aisyah Nurlatifah Ramadhanti",
             position: "Wakil Ketua Umum",
-            imageUrl: "/assets/organization/member/",
+            imageUrl: "/assets/organization/anggota/ketua-wakil/aisyah.jpg",
         },
     ];
 
@@ -40,7 +40,7 @@ const LeadershipSection = () => {
                                     <img
                                         src={leader.imageUrl}
                                         alt={leader.name}
-                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-140 group-hover:scale-160 transition-transform duration-500"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/90 via-primary-dark/30 to-transparent" />
                                 </div>

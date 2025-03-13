@@ -9,7 +9,7 @@ import "keen-slider/keen-slider.min.css";
 const ketua = [
     {
         name: "Muhammad Rajwa Arunarahman",
-        position: "Ketua Bidang",
+        position: "Kepala Bidang",
         // imageUrl: "/assets/organization/member/ketua.png",
         isLeader: true,
     },
@@ -18,7 +18,7 @@ const ketua = [
 const personalia = [
     {
         name: "Lafiga Rizki Hanata",
-        position: "Ketua Divisi",
+        position: "Kepala Divisi",
         // imageUrl: "/assets/organization/member/ketua.png",
         isLeader: true,
     },
@@ -51,7 +51,7 @@ const personalia = [
 const ekraf = [
     {
         name: "Restu Pramudya",
-        position: "Ketua Divisi",
+        position: "Kepala Divisi",
         // imageUrl: "/assets/organization/member/ketua.png",
         isLeader: true,
     },
@@ -135,7 +135,7 @@ const PO = () => {
                         >
                             <div className="absolute -inset-x-8 -inset-y-4 bg-primary-blue/20 blur-3xl -z-10 opacity-50 rounded-full"></div>
                             <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold tracking-tight mb-6">
-                                <span className="inline-block bg-gradient-to-r from-white via-primary-orange/80 to-white bg-clip-text text-transparent animate-gradient-x">
+                                <span className="inline-block bg-gradient-to-r from-white via-primary-orange/80 to-white bg-clip-text text-transparent animate-gradient-x p-1">
                                     Pengembangan Organisasi
                                 </span>
                             </h1>
@@ -155,7 +155,7 @@ const PO = () => {
                                     <img
                                         src={ketua[0].imageUrl}
                                         alt={ketua[0].name}
-                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-140 group-hover:scale-160 transition-transform duration-500"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                 </div>
@@ -261,7 +261,7 @@ const PO = () => {
                                                                         alt={
                                                                             member.name
                                                                         }
-                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-140 group-hover:scale-160 transition-transform duration-500"
                                                                     />
                                                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                                                 </div>
@@ -307,7 +307,7 @@ const PO = () => {
                                                                         alt={
                                                                             member.name
                                                                         }
-                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-140 group-hover:scale-160 transition-transform duration-500"
                                                                     />
                                                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                                                 </div>

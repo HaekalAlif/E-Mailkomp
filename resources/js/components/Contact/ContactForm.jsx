@@ -1,7 +1,82 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import axios from "axios";
+import { toast, Toaster } from "sonner";
 
 const ContactForm = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+        subject: "",
+        phone: "",
+    });
+    const [errors, setErrors] = useState({});
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+        if (errors[e.target.name]) {
+            setErrors({ ...errors, [e.target.name]: null });
+        }
+    };
+
+    const validate = () => {
+        let tempErrors = {};
+        if (!formData.name) tempErrors.name = "Name is required";
+        if (!formData.email) {
+            tempErrors.email = "Email is required";
+        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            tempErrors.email = "Email is invalid";
+        }
+        if (!formData.message) tempErrors.message = "Message is required";
+
+        setErrors(tempErrors);
+        return Object.keys(tempErrors).length === 0;
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (validate()) {
+            setIsSubmitting(true);
+            try {
+                const response = await axios.post("/api/contact", formData);
+                toast.success("Pesan berhasil terkirim", {
+                    duration: 4000,
+                    position: "center-center", // Center position
+                    style: {
+                        fontSize: "1.2rem",
+                        padding: "20px",
+                        maxWidth: "500px",
+                        fontWeight: "500",
+                    },
+                });
+                setFormData({
+                    name: "",
+                    email: "",
+                    message: "",
+                    subject: "",
+                    phone: "",
+                });
+            } catch (error) {
+                console.error("Form submission error:", error);
+                toast.error("Gagal mengirim pesan, coba lagi", {
+                    duration: 4000,
+                    position: "center-center", // Center position (fixed typo)
+                    style: {
+                        fontSize: "1.2rem",
+                        padding: "20px",
+                        maxWidth: "500px",
+                        fontWeight: "500",
+                    },
+                });
+            } finally {
+                setIsSubmitting(false);
+            }
+        }
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -20,49 +95,189 @@ const ContactForm = () => {
                 </span>
             </motion.h2>
 
+            {/* Updated Toaster component with center position */}
+            <Toaster
+                richColors
+                position="center"
+                expand={true}
+                toastOptions={{
+                    style: {
+                        fontSize: "1.2rem",
+                        padding: "20px",
+                        maxWidth: "500px",
+                        fontWeight: "500",
+                    },
+                    className: "my-toast-class",
+                }}
+            />
+
             <motion.form
-                action="#"
-                method="POST"
+                onSubmit={handleSubmit}
                 className="space-y-6"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.5 }}
             >
-                <motion.input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    className="w-full px-5 py-3 text-white border border-transparent rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-primary-blue transition-all bg-white/20 backdrop-blur-md"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.6 }}
-                />
-                <motion.input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    className="w-full px-5 py-3 text-white border border-transparent rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-primary-blue transition-all bg-white/20 backdrop-blur-md"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.8 }}
-                />
-                <motion.textarea
-                    name="message"
-                    rows="3"
-                    placeholder="Your Message"
-                    className="w-full px-5 py-3 text-white border border-transparent rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-primary-blue transition-all bg-white/20 backdrop-blur-md"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 1 }}
-                ></motion.textarea>
+                <div>
+                    <motion.label
+                        htmlFor="name"
+                        className="block text-white text-md font-medium mb-1"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
+                    >
+                        Name
+                    </motion.label>
+                    <motion.input
+                        id="name"
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className={`w-full px-5 py-3 text-white border ${
+                            errors.name
+                                ? "border-red-500"
+                                : "border-transparent"
+                        } rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-primary-blue transition-all bg-white/20 backdrop-blur-md`}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.6 }}
+                    />
+                    {errors.name && (
+                        <p className="text-sm text-red-400 mt-1">
+                            {errors.name}
+                        </p>
+                    )}
+                </div>
+
+                <div>
+                    <motion.label
+                        htmlFor="email"
+                        className="block text-white text-md font-medium mb-1"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.8 }}
+                    >
+                        Email Address
+                    </motion.label>
+                    <motion.input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={`w-full px-5 py-3 text-white border ${
+                            errors.email
+                                ? "border-red-500"
+                                : "border-transparent"
+                        } rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-primary-blue transition-all bg-white/20 backdrop-blur-md`}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.8 }}
+                    />
+                    {errors.email && (
+                        <p className="text-sm text-red-400 mt-1">
+                            {errors.email}
+                        </p>
+                    )}
+                </div>
+
+                <div>
+                    <motion.label
+                        htmlFor="subject"
+                        className="block text-white text-md font-medium mb-1"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.9 }}
+                    >
+                        Subject (Optional)
+                    </motion.label>
+                    <motion.input
+                        id="subject"
+                        type="text"
+                        name="subject"
+                        placeholder="Subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        className="w-full px-5 py-3 text-white border border-transparent rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-primary-blue transition-all bg-white/20 backdrop-blur-md"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.9 }}
+                    />
+                </div>
+
+                <div>
+                    <motion.label
+                        htmlFor="phone"
+                        className="block text-white text-md font-medium mb-1"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.95 }}
+                    >
+                        Phone Number (Optional)
+                    </motion.label>
+                    <motion.input
+                        id="phone"
+                        type="text"
+                        name="phone"
+                        placeholder="Phone Number"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-5 py-3 text-white border border-transparent rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-primary-blue transition-all bg-white/20 backdrop-blur-md"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.95 }}
+                    />
+                </div>
+
+                <div>
+                    <motion.label
+                        htmlFor="message"
+                        className="block text-white text-md font-medium mb-1"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 1 }}
+                    >
+                        Message
+                    </motion.label>
+                    <motion.textarea
+                        id="message"
+                        name="message"
+                        rows="3"
+                        placeholder="Type your message here"
+                        value={formData.message}
+                        onChange={handleChange}
+                        className={`w-full px-5 py-3 text-white border ${
+                            errors.message
+                                ? "border-red-500"
+                                : "border-transparent"
+                        } rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-primary-blue transition-all bg-white/20 backdrop-blur-md`}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 1 }}
+                    ></motion.textarea>
+                    {errors.message && (
+                        <p className="text-sm text-red-400 mt-1">
+                            {errors.message}
+                        </p>
+                    )}
+                </div>
+
                 <motion.button
                     type="submit"
-                    className="w-full py-3 bg-gradient-to-r from-primary-orange to-primary-blue text-white rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-primary-blue/20"
+                    disabled={isSubmitting}
+                    className={`w-full py-3 bg-gradient-to-r from-primary-orange to-primary-blue text-white rounded-xl shadow-lg transform transition-all duration-300 ${
+                        isSubmitting
+                            ? "opacity-70 cursor-not-allowed"
+                            : "hover:scale-105 hover:shadow-primary-blue/20"
+                    }`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1.2 }}
                 >
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                 </motion.button>
             </motion.form>
         </motion.div>

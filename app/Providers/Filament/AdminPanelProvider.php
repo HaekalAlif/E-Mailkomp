@@ -27,19 +27,29 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandName('E-Mailkomp')
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::hex('#ED8200'),   // Orange as primary color
+                'secondary' => Color::hex('#1C073F'), // Purple 
+                'danger' => Color::hex('#056BF1'),    // Blue moved to danger
+                'warning' => Color::hex('#ED8200'),   // Orange
+                'success' => Color::hex('#1F39D4'),   // Indigo
+                'info' => Color::hex('#1F39D4'),      // Indigo
+                'gray' => Color::hex('#170036'),      // Dark
             ])
+            ->darkMode(true) // Keep dark mode enabled
+            ->theme('app')
+            ->navigationGroups(['Message Management', 'Content Management', 'Settings'])
+            ->topNavigation(false)                   
+            ->sidebarCollapsibleOnDesktop(true)      // Allow sidebar to be collapsed
+            ->sidebarWidth('260px')                  // Slightly wider sidebar
+            ->brandLogo(fn () => view('filament.logo'))
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
-                Pages\Dashboard::class,
+                \App\Filament\Pages\Dashboard::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
-            ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
-            ])
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,

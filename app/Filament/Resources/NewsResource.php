@@ -26,6 +26,10 @@ class NewsResource extends Resource
     protected static ?string $model = News::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    
+    protected static ?string $navigationGroup = 'Content Management';
+    protected static ?int $navigationSort = 2;
+    protected static ?string $recordTitleAttribute = 'title';
 
     public static function form(Form $form): Form
     {
@@ -91,7 +95,9 @@ class NewsResource extends Resource
                     ->height(50),
                 TextColumn::make('content')
                     ->label('Content')
+                    ->limit(50)
                     ->sortable(),
+                    
                 TextColumn::make('event_date')
                     ->label('Event Date')
                     ->date()

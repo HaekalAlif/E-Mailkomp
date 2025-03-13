@@ -9,7 +9,7 @@ import "keen-slider/keen-slider.min.css";
 const ketua = [
     {
         name: "Anisa Fatimah Azzahra",
-        position: "Ketua Bidang",
+        position: "Kepala Bidang",
         // imageUrl: "/assets/organization/member/ketua.png",
         isLeader: true,
     },
@@ -18,13 +18,13 @@ const ketua = [
 const psdm = [
     {
         name: "Nanang Ardiansyah",
-        position: "Ketua Divisi",
+        position: "Kepala Divisi",
         // imageUrl: "/assets/organization/member/ketua.png",
         isLeader: true,
     },
     {
         name: "Mahesa Rahmad Ramdani",
-        position: "Staff Divisi",
+        position: "Kepala Divisi",
         // imageUrl: "/assets/organization/member/ketua.png",
         isLeader: false,
     },
@@ -167,7 +167,7 @@ const Mawa = () => {
                                     <img
                                         src={ketua[0].imageUrl}
                                         alt={ketua[0].name}
-                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-140 group-hover:scale-160 transition-transform duration-500"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                 </div>
@@ -273,7 +273,7 @@ const Mawa = () => {
                                                                         alt={
                                                                             member.name
                                                                         }
-                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-140 group-hover:scale-160 transition-transform duration-500"
                                                                     />
                                                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                                                 </div>
@@ -319,7 +319,7 @@ const Mawa = () => {
                                                                         alt={
                                                                             member.name
                                                                         }
-                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-140 group-hover:scale-160 transition-transform duration-500"
                                                                     />
                                                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                                                 </div>

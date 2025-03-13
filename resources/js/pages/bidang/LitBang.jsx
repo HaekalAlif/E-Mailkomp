@@ -9,7 +9,7 @@ import "keen-slider/keen-slider.min.css";
 const ketua = [
     {
         name: "Naufal Dwi Saputro",
-        position: "Ketua Bidang",
+        position: "Kepala Bidang",
         // imageUrl: "/assets/organization/member/ketua.png",
         isLeader: true,
     },
@@ -18,7 +18,7 @@ const ketua = [
 const medinfo = [
     {
         name: "Naufal Tsaqif Athala Irchamto",
-        position: "Ketua Divisi",
+        position: "Kepala Divisi",
         // imageUrl: "/assets/organization/member/ketua.png",
         isLeader: true,
     },
@@ -63,7 +63,7 @@ const medinfo = [
 const rnd = [
     {
         name: "Muhammad Haekal Alif Putra",
-        position: "Ketua Divisi",
+        position: "Kepala Divisi",
         // imageUrl: "/assets/organization/member/ketua.png",
         isLeader: true,
     },
@@ -153,7 +153,7 @@ const LitBang = () => {
                         >
                             <div className="absolute -inset-x-8 -inset-y-4 bg-primary-blue/20 blur-3xl -z-10 opacity-50 rounded-full"></div>
                             <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold tracking-tight mb-6">
-                                <span className="inline-block bg-gradient-to-r from-white via-primary-orange/80 to-white bg-clip-text text-transparent animate-gradient-x">
+                                <span className="inline-block bg-gradient-to-r from-white via-primary-orange/80 to-white bg-clip-text text-transparent animate-gradient-x p-1">
                                     Penelitian dan Pengembangan
                                 </span>
                             </h1>
@@ -173,7 +173,7 @@ const LitBang = () => {
                                     <img
                                         src={ketua[0].imageUrl}
                                         alt={ketua[0].name}
-                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-140 group-hover:scale-160 transition-transform duration-500"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                 </div>
@@ -196,7 +196,7 @@ const LitBang = () => {
                             members: medinfo,
                         },
                         {
-                            title: "Riset dan Data",
+                            title: "Research and development",
                             members: rnd,
                         },
                     ].map((section, sectionIndex) => {
@@ -279,7 +279,7 @@ const LitBang = () => {
                                                                         alt={
                                                                             member.name
                                                                         }
-                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-140 group-hover:scale-160 transition-transform duration-500"
                                                                     />
                                                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                                                 </div>
@@ -325,7 +325,7 @@ const LitBang = () => {
                                                                         alt={
                                                                             member.name
                                                                         }
-                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-150 group-hover:scale-150 transition-transform duration-500"
+                                                                        className="absolute inset-0 w-full h-full object-cover transform skew-x-[12deg] scale-140 group-hover:scale-160 transition-transform duration-500"
                                                                     />
                                                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                                                                 </div>
