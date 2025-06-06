@@ -147,7 +147,7 @@ const ArticleDetail = () => {
                     onClick={() => navigate(-1)} // Goes back to the previous page
                     className="text-white bg-primary-orange hover:bg-primary-dark font-semibold py-2 px-4 rounded-lg"
                 >
-                    &larr; Back to EMsiklopedia
+                    &larr; Kembali ke EMsiklopedia
                 </button>
             </div>
         </div>

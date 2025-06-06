@@ -10,7 +10,7 @@ const ketua = [
     {
         name: "Nabila Elita Dewi ",
         position: "kepala Bidang",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/jaringan/elita.png",
         isLeader: true,
     },
 ];
@@ -19,25 +19,25 @@ const sosma = [
     {
         name: "Muharram Ariel Pamungkas",
         position: "kepala Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/jaringan/ariel.png",
         isLeader: true,
     },
     {
         name: "Raditya Hafid Daniswara",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/jaringan/radit.png",
         isLeader: false,
     },
     {
         name: "Aqila Zaky Ramadhan",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/jaringan/aqila.png",
         isLeader: false,
     },
     {
         name: "Amanda Namira Tsatsabil",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/jaringan/amanda.png",
         isLeader: false,
     },
 ];
@@ -46,25 +46,25 @@ const humas = [
     {
         name: "Tengku Kaisar Akbar Yudhatama",
         position: "Kepala Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/jaringan/kaisar.png",
         isLeader: true,
     },
     {
         name: "Syafiq Muhammad Musyafa Arsy At-Taufiq",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/jaringan/syafiq.png",
         isLeader: false,
     },
     {
         name: "Dodik Bima Satyadi",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/jaringan/dodi.png",
         isLeader: false,
     },
     {
         name: "Metodius Taraagastya Budiono",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/jaringan/odi.png",
         isLeader: false,
     },
 ];

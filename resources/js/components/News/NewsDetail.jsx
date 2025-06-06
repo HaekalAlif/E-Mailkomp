@@ -146,7 +146,7 @@ const NewsDetail = () => {
                     onClick={() => navigate(-1)}
                     className="text-white bg-primary-orange hover:bg-primary-dark font-semibold py-2 px-4 rounded-lg"
                 >
-                    &larr; Back to Berita
+                    &larr; Kembali ke Berita
                 </button>
             </div>
         </div>

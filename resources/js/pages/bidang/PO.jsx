@@ -10,7 +10,7 @@ const ketua = [
     {
         name: "Muhammad Rajwa Arunarahman",
         position: "Kepala Bidang",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/po/rajwa.png",
         isLeader: true,
     },
 ];
@@ -19,31 +19,31 @@ const personalia = [
     {
         name: "Lafiga Rizki Hanata",
         position: "Kepala Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/po/figa.png",
         isLeader: true,
     },
     {
         name: "Nur Putri Afifah",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/po/afifah.png",
         isLeader: false,
     },
     {
         name: "Hamka Ibnu Zufar",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/po/hamka.png",
         isLeader: false,
     },
     {
         name: "Harits Naufal Ismail",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/po/harits.png",
         isLeader: false,
     },
     {
         name: "Gusti Virdila Arum Pramesti",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/po/arum.png",
         isLeader: false,
     },
 ];
@@ -52,25 +52,25 @@ const ekraf = [
     {
         name: "Restu Pramudya",
         position: "Kepala Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/po/restu.png",
         isLeader: true,
     },
     {
         name: "Dicky Candra Permana",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/po/dicky.png",
         isLeader: false,
     },
     {
         name: "Suciana Nurika Apriliani",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/po/cia.png",
         isLeader: false,
     },
     {
         name: "Deylon Gabriel Augustiano",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/po/deylon.png",
         isLeader: false,
     },
 ];

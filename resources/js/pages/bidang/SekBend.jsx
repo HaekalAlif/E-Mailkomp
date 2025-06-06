@@ -10,7 +10,7 @@ const ketua = [
     {
         name: "Arum Maylan Palupi",
         position: "Kepala Bidang",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/sekbend/maylan.png",
         isLeader: true,
     },
 ];
@@ -19,25 +19,25 @@ const sekretaris = [
     {
         name: "Mungalimah Thoyyibah",
         position: "Kepala Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/sekbend/alimah.png",
         isLeader: true,
     },
     {
         name: "Rosita Sabrina Filsah ",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/sekbend/rosita.png",
         isLeader: false,
     },
     {
         name: "Muhammad Abimanyu Riza",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/sekbend/abim.png",
         isLeader: false,
     },
     {
         name: "Aldifa Zahrotul Aufar",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/sekbend/difa.png",
         isLeader: false,
     },
 ];
@@ -46,19 +46,19 @@ const bendahara = [
     {
         name: "Regita Aulia Fridawati",
         position: "Kepala Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/sekbend/regita.png",
         isLeader: true,
     },
     {
         name: "Raphael Rhinovaldi Wibisana",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/sekbend/raphael.png",
         isLeader: false,
     },
     {
         name: "Lailla Nurulita Ramadhani",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/sekbend/lailla.png",
         isLeader: false,
     },
 ];

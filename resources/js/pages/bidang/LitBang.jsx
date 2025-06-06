@@ -10,7 +10,7 @@ const ketua = [
     {
         name: "Naufal Dwi Saputro",
         position: "Kepala Bidang",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/litbang/dwi.png",
         isLeader: true,
     },
 ];
@@ -19,43 +19,43 @@ const medinfo = [
     {
         name: "Naufal Tsaqif Athala Irchamto",
         position: "Kepala Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/litbang/tsaqif.png",
         isLeader: true,
     },
     {
         name: "Satrio Aji Pamungkas",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/litbang/saji.png",
         isLeader: false,
     },
     {
         name: "Devina Audrey Farrel Dian Krisna",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/litbang/audrey.png",
         isLeader: false,
     },
     {
         name: "Irsyad Nashir Prasetya",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/litbang/irsyad.png",
         isLeader: false,
     },
     {
         name: "Kintan Zealotous Dedi Gunawan",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/litbang/kintan.png",
         isLeader: false,
     },
     {
         name: "Faisal Amiruddin",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/litbang/faisal.png",
         isLeader: false,
     },
     {
         name: "Gilang Dafa Ardan",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/litbang/gilang.png",
         isLeader: false,
     },
 ];
@@ -64,31 +64,31 @@ const rnd = [
     {
         name: "Muhammad Haekal Alif Putra",
         position: "Kepala Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/litbang/haekal.png",
         isLeader: true,
     },
     {
         name: "Auliya' Nur 'Afifah",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/litbang/afifah.png",
         isLeader: false,
     },
     {
         name: "Baren Maharani",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/litbang/baren.png",
         isLeader: false,
     },
     {
         name: "Giancarlo Sindusakti Mahogra",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/litbang/carlo.png",
         isLeader: false,
     },
     {
         name: "Akmal Gelar Maulana Saputro",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/litbang/akmal.png",
         isLeader: false,
     },
 ];

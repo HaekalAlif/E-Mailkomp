@@ -10,7 +10,7 @@ const ketua = [
     {
         name: "Anisa Fatimah Azzahra",
         position: "Kepala Bidang",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/mawa/nisa.png",
         isLeader: true,
     },
 ];
@@ -19,43 +19,43 @@ const psdm = [
     {
         name: "Nanang Ardiansyah",
         position: "Kepala Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/mawa/nanang.png",
         isLeader: true,
     },
     {
         name: "Mahesa Rahmad Ramdani",
-        position: "Kepala Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        position: "Staff Divisi",
+        imageUrl: "/assets/organization/anggota/mawa/mahesa.png",
         isLeader: false,
     },
     {
         name: "Citra Tri Setyaningrum",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/mawa/citra.png",
         isLeader: false,
     },
     {
         name: "Muharram Bagas Putra Santoso",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/mawa/muha.png",
         isLeader: false,
     },
     {
         name: "Hasna May Tanaya",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/mawa/may.png",
         isLeader: false,
     },
     {
         name: "Zahra Raufatul Azizah",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/mawa/zahra.png",
         isLeader: false,
     },
     {
         name: "Zaskiya Salsabila Quratu'ain Dyahari",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/mawa/zaskiya.png",
         isLeader: false,
     },
 ];
@@ -64,25 +64,25 @@ const minatbakat = [
     {
         name: "Justin Farrel Hazza Ashari",
         position: "Ketua Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/mawa/justin.png",
         isLeader: true,
     },
     {
         name: "Khairuddin Al Fadhilah",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/mawa/fadhil.png",
         isLeader: false,
     },
     {
         name: "Ahmad Alaudin Falah",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/mawa/falah.png",
         isLeader: false,
     },
     {
         name: "Hanif Khoerul Aqilla",
         position: "Staff Divisi",
-        // imageUrl: "/assets/organization/member/ketua.png",
+        imageUrl: "/assets/organization/anggota/mawa/hanif.png",
         isLeader: false,
     },
 ];

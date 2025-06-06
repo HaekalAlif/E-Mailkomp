@@ -23,13 +23,13 @@ const ContactForm = () => {
 
     const validate = () => {
         let tempErrors = {};
-        if (!formData.name) tempErrors.name = "Name is required";
+        if (!formData.name) tempErrors.name = "Harap isi nama terlebih dahulu";
         if (!formData.email) {
-            tempErrors.email = "Email is required";
+            tempErrors.email = "Harap isi alamat email terlebih dahulu";
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            tempErrors.email = "Email is invalid";
+            tempErrors.email = "Email tidak valid";
         }
-        if (!formData.message) tempErrors.message = "Message is required";
+        if (!formData.message) tempErrors.message = "Harap isi pesan terlebih dahulu";
 
         setErrors(tempErrors);
         return Object.keys(tempErrors).length === 0;
@@ -44,7 +44,7 @@ const ContactForm = () => {
                 const response = await axios.post("/api/contact", formData);
                 toast.success("Pesan berhasil terkirim", {
                     duration: 4000,
-                    position: "center-center", // Center position
+                    position: "center-center",
                     style: {
                         fontSize: "1.2rem",
                         padding: "20px",
@@ -63,7 +63,7 @@ const ContactForm = () => {
                 console.error("Form submission error:", error);
                 toast.error("Gagal mengirim pesan, coba lagi", {
                     duration: 4000,
-                    position: "center-center", // Center position (fixed typo)
+                    position: "center-center", 
                     style: {
                         fontSize: "1.2rem",
                         padding: "20px",
@@ -91,11 +91,10 @@ const ContactForm = () => {
                 className="text-2xl md:text-3xl font-medium mb-4 text-center"
             >
                 <span className="bg-gradient-to-r from-white/90 via-primary-orange/70 to-white/90 bg-clip-text text-transparent">
-                    Send Us a Message
+                    Kirim Pesan Kepada Kami
                 </span>
             </motion.h2>
 
-            {/* Updated Toaster component with center position */}
             <Toaster
                 richColors
                 position="center"
@@ -126,13 +125,13 @@ const ContactForm = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
                     >
-                        Name
+                        Nama
                     </motion.label>
                     <motion.input
                         id="name"
                         type="text"
                         name="name"
-                        placeholder="Your Name"
+                        placeholder="Nama pengirim"
                         value={formData.name}
                         onChange={handleChange}
                         className={`w-full px-5 py-3 text-white border ${
@@ -159,13 +158,13 @@ const ContactForm = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.8 }}
                     >
-                        Email Address
+                        Email
                     </motion.label>
                     <motion.input
                         id="email"
                         type="email"
                         name="email"
-                        placeholder="Your Email"
+                        placeholder="example@gmail.com"
                         value={formData.email}
                         onChange={handleChange}
                         className={`w-full px-5 py-3 text-white border ${
@@ -192,13 +191,13 @@ const ContactForm = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.9 }}
                     >
-                        Subject (Optional)
+                        Perihal (Opsional)
                     </motion.label>
                     <motion.input
                         id="subject"
                         type="text"
                         name="subject"
-                        placeholder="Subject"
+                        placeholder="Perihal pesan"
                         value={formData.subject}
                         onChange={handleChange}
                         className="w-full px-5 py-3 text-white border border-transparent rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-primary-blue transition-all bg-white/20 backdrop-blur-md"
@@ -216,13 +215,13 @@ const ContactForm = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.95 }}
                     >
-                        Phone Number (Optional)
+                        No Telepon (Opsional)
                     </motion.label>
                     <motion.input
                         id="phone"
                         type="text"
                         name="phone"
-                        placeholder="Phone Number"
+                        placeholder="08xxxxxxxxxx"
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-5 py-3 text-white border border-transparent rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-primary-blue transition-all bg-white/20 backdrop-blur-md"
@@ -240,13 +239,13 @@ const ContactForm = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 1 }}
                     >
-                        Message
+                        Pesan
                     </motion.label>
                     <motion.textarea
                         id="message"
                         name="message"
                         rows="3"
-                        placeholder="Type your message here"
+                        placeholder="Tulis pesan Anda di sini"
                         value={formData.message}
                         onChange={handleChange}
                         className={`w-full px-5 py-3 text-white border ${
@@ -277,7 +276,7 @@ const ContactForm = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1.2 }}
                 >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {isSubmitting ? "Mengirim..." : "Kirim Pesan"}
                 </motion.button>
             </motion.form>
         </motion.div>

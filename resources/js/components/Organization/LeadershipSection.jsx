@@ -6,12 +6,12 @@ const LeadershipSection = () => {
         {
             name: "Satria Pambingkas",
             position: "Ketua Umum",
-            imageUrl: "/assets/organization/anggota/ketua-wakil/satria.jpg",
+            imageUrl: "/assets/organization/anggota/ketua-wakil/satria.png",
         },
         {
             name: "Aisyah Nurlatifah Ramadhanti",
             position: "Wakil Ketua Umum",
-            imageUrl: "/assets/organization/anggota/ketua-wakil/aisyah.jpg",
+        imageUrl: "/assets/organization/anggota/ketua-wakil/aisyah.png",
         },
     ];
 

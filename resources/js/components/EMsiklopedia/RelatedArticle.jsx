@@ -13,7 +13,7 @@ const RelatedArticle = () => {
                 const articleArray = Array.isArray(data)
                     ? data
                     : data.data || [];
-                setArticles(articleArray);
+                setArticles(articleArray.slice(0, 5));
                 setLoading(false);
             })
             .catch((error) => {
